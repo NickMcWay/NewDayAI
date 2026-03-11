@@ -34,11 +34,31 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 0.9rem;
+  flex-wrap: wrap;
 }
 
 .brand {
   font-size: 1.25rem;
   font-weight: 700;
+  text-decoration: none;
+  color: var(--text);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.brand__logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.nav__links {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
 }
 
 .hero__content {
@@ -118,7 +138,8 @@ h1 {
   gap: 1rem;
 }
 
-.card {
+.card,
+.screen-card {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 0.9rem;
@@ -131,12 +152,24 @@ h1 {
   border-bottom: 1px solid var(--border);
 }
 
-.split {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.screen-grid {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   gap: 1rem;
-  flex-wrap: wrap;
+}
+
+.screen-card img {
+  width: 100%;
+  aspect-ratio: 9 / 18;
+  object-fit: cover;
+  border-radius: 0.8rem;
+  border: 1px solid var(--border);
+}
+
+.screen-card h3 {
+  margin-top: 0.8rem;
+  margin-bottom: 0.35rem;
 }
 
 .footer {
@@ -146,8 +179,37 @@ h1 {
 .footer__content {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
   color: var(--muted);
   font-size: 0.95rem;
+}
+
+.footer__links {
+  display: inline-flex;
+  gap: 1rem;
+}
+
+.footer__links a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.footer__links a:hover {
+  color: var(--primary);
+}
+
+.legal {
+  max-width: 760px;
+}
+
+.legal ul {
+  padding-left: 1.15rem;
+}
+
+.muted {
+  color: var(--muted);
 }
 
 code {
