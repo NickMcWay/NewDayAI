@@ -13,18 +13,32 @@
   <body>
     <header class="hero">
       <nav class="nav container">
-        <span class="brand">NewDay</span>
-        <a class="button button--ghost" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="brand" href="#top" aria-label="NewDay home">
+          <img class="brand__logo" src="1024.png" alt="NewDay app logo" />
+          <span>NewDay</span>
+        </a>
+        <div class="nav__links">
+          <a class="button button--ghost" href="privacy.html">Privacy</a>
+          <a
+            class="button"
+            href="https://apps.apple.com/app/id6754460979"
+            target="_blank"
+            rel="noreferrer"
+            >Download on the App Store</a
+          >
+        </div>
       </nav>
-      <section class="hero__content container">
+      <section class="hero__content container" id="top">
         <p class="eyebrow">A cleaner way to manage your time</p>
         <h1>Make every day intentional with NewDay</h1>
         <p class="subtitle">
           Plan tasks around your real schedule, focus deeply, and review progress without losing momentum.
         </p>
         <div class="cta-row">
-          <a class="button" href="https://github.com/" target="_blank" rel="noreferrer">View on GitHub</a>
-          <a class="button button--ghost" href="#features">Explore features</a>
+          <a class="button" href="https://apps.apple.com/app/id6754460979" target="_blank" rel="noreferrer"
+            >Get NewDay on the App Store</a
+          >
+          <a class="button button--ghost" href="#screens">See app screens</a>
         </div>
       </section>
     </header>
@@ -48,16 +62,35 @@
         </div>
       </section>
 
-      <section class="section section--alt">
-        <div class="container split">
-          <div>
-            <h2>Ready for GitHub Pages</h2>
-            <p>
-              This folder is a standalone static site. Publish it with GitHub Pages by setting your source
-              to the <code>newday-github-page</code> folder (or copy it into a <code>docs/</code> branch strategy).
-            </p>
+      <section id="screens" class="section section--alt">
+        <div class="container">
+          <h2>See NewDay in action</h2>
+          <p class="subtitle">
+            NewDay combines daily structure, focus sessions, and weekly planning in one place. Each screen is designed
+            to keep your priorities visible without clutter.
+          </p>
+          <div class="screen-grid">
+            <article class="screen-card">
+              <img src="TodayView.jpg" alt="Today view showing prioritized daily tasks" />
+              <h3>Today View</h3>
+              <p>Quickly review your top priorities and execute the day with clarity.</p>
+            </article>
+            <article class="screen-card">
+              <img src="NowView.jpg" alt="Now view with active focus timer" />
+              <h3>Now View</h3>
+              <p>Stay locked in with an active focus mode that keeps distractions low.</p>
+            </article>
+            <article class="screen-card">
+              <img src="PlanView.jpg" alt="Plan view for scheduling and organizing tasks" />
+              <h3>Plan View</h3>
+              <p>Map work across your schedule and make room for what matters most.</p>
+            </article>
+            <article class="screen-card">
+              <img src="Areas.jpg" alt="Areas view organizing tasks by life category" />
+              <h3>Areas View</h3>
+              <p>Balance responsibilities across life areas so progress stays sustainable.</p>
+            </article>
           </div>
-          <a class="button" href="https://pages.github.com/" target="_blank" rel="noreferrer">Publish guide</a>
         </div>
       </section>
     </main>
@@ -65,7 +98,10 @@
     <footer class="footer">
       <div class="container footer__content">
         <span>© <span id="year"></span> NewDay</span>
-        <span>Made for focused work.</span>
+        <div class="footer__links">
+          <a href="privacy.html">Privacy</a>
+          <a href="https://apps.apple.com/app/id6754460979" target="_blank" rel="noreferrer">App Store</a>
+        </div>
       </div>
     </footer>
 
