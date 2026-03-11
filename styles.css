@@ -45,7 +45,7 @@ body {
 
 .brand {
   font-size: 1.25rem;
-  font-weight: 800;
+  font-weight: 700;
   text-decoration: none;
   color: var(--text);
   display: inline-flex;
@@ -54,11 +54,10 @@ body {
 }
 
 .brand__logo {
-  width: 38px;
-  height: 38px;
-  border-radius: 10px;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
   object-fit: cover;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
 }
 
 .nav__links {
@@ -152,10 +151,6 @@ h1 {
   gap: 1rem;
 }
 
-.screen-grid {
-  align-items: stretch;
-}
-
 .card,
 .screen-card {
   background: var(--card);
@@ -197,12 +192,24 @@ h1 {
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-.split {
-  display: flex;
-  justify-content: space-between;
+.screen-grid {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   gap: 1rem;
-  align-items: center;
-  flex-wrap: wrap;
+}
+
+.screen-card img {
+  width: 100%;
+  aspect-ratio: 9 / 18;
+  object-fit: cover;
+  border-radius: 0.8rem;
+  border: 1px solid var(--border);
+}
+
+.screen-card h3 {
+  margin-top: 0.8rem;
+  margin-bottom: 0.35rem;
 }
 
 .footer {
@@ -222,7 +229,6 @@ h1 {
 .footer__links {
   display: inline-flex;
   gap: 1rem;
-  flex-wrap: wrap;
 }
 
 .footer__links a {
@@ -235,13 +241,19 @@ h1 {
 }
 
 .legal {
-  max-width: 860px;
+  max-width: 760px;
 }
 
 .legal ul {
-  padding-left: 1.2rem;
+  padding-left: 1.15rem;
 }
 
 .muted {
   color: var(--muted);
+}
+
+code {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0.35rem;
+  padding: 0.1rem 0.35rem;
 }
